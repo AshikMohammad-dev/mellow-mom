@@ -1,0 +1,72 @@
+{
+  "generatedAt": "2026-11-18T16:27:00+05:30",
+  "generatedOnPlatform": "win32",
+  "projectType": "webapp",
+  "setup": [
+    {
+      "command": "npm",
+      "args": ["ci"],
+      "timeoutSeconds": 600
+    }
+  ],
+  "assertions": [
+    {
+      "name": "production-build",
+      "kind": "process",
+      "command": "npm",
+      "args": ["run", "build"],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "tests-pass",
+      "kind": "process",
+      "command": "npm",
+      "args": ["test"],
+      "verificationMethod": "test-results",
+      "expected": "0",
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "home-route",
+      "kind": "http-probe",
+      "startCommand": "npm",
+      "startArgs": ["run", "dev", "--", "--host", "127.0.0.1", "--port", "3160"],
+      "url": "http://127.0.0.1:3160/",
+      "verificationMethod": "output-contains",
+      "expected": "Motherhood,",
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "about-route",
+      "kind": "http-probe",
+      "startCommand": "npm",
+      "startArgs": ["run", "dev", "--", "--host", "127.0.0.1", "--port", "3160"],
+      "url": "http://127.0.0.1:3160/about",
+      "verificationMethod": "output-contains",
+      "expected": "Care for the mother",
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "care-route",
+      "kind": "http-probe",
+      "startCommand": "npm",
+      "startArgs": ["run", "dev", "--", "--host", "127.0.0.1", "--port", "3160"],
+      "url": "http://127.0.0.1:3160/care",
+      "verificationMethod": "output-contains",
+      "expected": "Support for the season",
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "contact-route",
+      "kind": "http-probe",
+      "startCommand": "npm",
+      "startArgs": ["run", "dev", "--", "--host", "127.0.0.1", "--port", "3160"],
+      "url": "http://127.0.0.1:3160/contact",
+      "verificationMethod": "output-contains",
+      "expected": "Contact us",
+      "timeoutSeconds": 120
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "planHash": "3a1660981ad6b993199b7b4eede27b0ab7585879832ada5f6a2f99b16f5b2f64",
+  "phase": "baseline",
+  "recordedAtUtc": "2026-11-18T11:20:07.9614729Z",
+  "retryCount": 0,
+  "resetBaseline": true,
+  "complete": true,
+  "result": {
+    "setupSucceeded": false,
+    "setupDurationMs": 23193,
+    "setupFailureOutput": "setup step 0 \u0027npm\u0027 failed (exit=-4082, timedOut=False)\r\nnpm error code EBUSY\r\nnpm error syscall rmdir\r\nnpm error path C:\\Users\\ashik\\Downloads\\mellowmom\\node_modules\\@mapbox\\node-pre-gyp\r\nnpm error errno -4082\r\nnpm error EBUSY: resource busy or locked, rmdir \u0027C:\\Users\\ashik\\Downloads\\mellowmom\\node_modules\\@mapbox\\node-pre-gyp\u0027\r\nnpm error A complete log of this run can be found in: C:\\Users\\ashik\\AppData\\Local\\npm-cache\\_logs\\2026-11-18T11_19_45_669Z-debug-0.log\r\n",
+    "assertions": [],
+    "executions": [
+      {
+        "source": "setup[0]",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "ci"
+        ],
+        "cwd": "C:\\Users\\ashik\\Downloads\\mellowmom",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      }
+    ]
+  }
+}
