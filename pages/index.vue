@@ -56,7 +56,7 @@ const icons = [Heart, Baby, Sparkles, Home]
     </section>
 
     <section class="story-section">
-      <img class="story-image" src="/images/motherhood-at-home.jpg" alt="Mother and children together in a relaxed moment at home" loading="lazy" />
+      <img class="story-image" src="/images/quiet-moments.jpg" alt="Newborn baby's feet resting in a soft white blanket" loading="lazy" />
       <div class="story-overlay" />
       <div class="container"><div class="story-content"><p class="eyebrow">A moment for you</p><h2 class="display-balance">Motherhood is a journey. You deserve support along the way.</h2><p>Take a moment to rest, recover and reconnect with yourself. Let us be part of your motherhood journey.</p></div></div>
     </section>
