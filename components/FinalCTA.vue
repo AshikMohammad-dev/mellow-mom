@@ -4,7 +4,7 @@ defineProps<{ eyebrow?: string; title: string; text: string }>()
 </script>
 
 <template>
-  <section class="section section-rose final-cta">
+  <section class="section final-cta">
     <div class="container final-cta-inner">
       <div>
         <p v-if="eyebrow" class="eyebrow">{{ eyebrow }}</p>
@@ -12,7 +12,9 @@ defineProps<{ eyebrow?: string; title: string; text: string }>()
       </div>
       <div>
         <p>{{ text }}</p>
-        <a class="btn btn-primary btn-arrow" :href="generalLink" target="_blank" rel="noopener" style="margin-top: 24px;">Enquire on WhatsApp</a>
+        <a class="btn btn-primary btn-arrow" :href="generalLink" target="_blank" rel="noopener">
+          Enquire on WhatsApp
+        </a>
       </div>
     </div>
   </section>
