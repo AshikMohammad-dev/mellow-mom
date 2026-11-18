@@ -26,30 +26,16 @@ watch(() => route.path, () => { void observeFooter() })
 </script>
 
 <template>
-  <div
-    class="whatsapp-widget-container"
+  <a
+    class="whatsapp-float"
     :class="{ 'is-obscured': isFooterVisible }"
+    :href="generalLink"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with Mellow Mom on WhatsApp"
+    :aria-hidden="isFooterVisible"
+    :tabindex="isFooterVisible ? -1 : 0"
   >
-    <a
-      :href="generalLink"
-      target="_blank"
-      rel="noopener"
-      class="whatsapp-float-tooltip"
-      aria-hidden="true"
-      tabindex="-1"
-    >
-      <span>Chat with Mellow Mom</span>
-    </a>
-    <a
-      class="whatsapp-float"
-      :href="generalLink"
-      target="_blank"
-      rel="noopener"
-      aria-label="Chat with Mellow Mom on WhatsApp"
-      :aria-hidden="isFooterVisible"
-      :tabindex="isFooterVisible ? -1 : 0"
-    >
-      <WhatsAppIcon class="whatsapp-icon" />
-    </a>
-  </div>
+    <WhatsAppIcon class="whatsapp-icon" />
+  </a>
 </template>

@@ -9,14 +9,11 @@ const { linkFor } = useWhatsApp()
     <div class="service-image-wrap">
       <img class="service-image" :src="service.image" :alt="service.alt" loading="lazy" />
       <span class="service-index">0{{ index + 1 }}</span>
-      <span class="service-badge">{{ service.eyebrow }}</span>
     </div>
     <div class="service-body">
       <h3>{{ service.title }}</h3>
       <p>{{ service.shortDescription }}</p>
-      <a class="text-link" :href="linkFor(service.message)" target="_blank" rel="noopener">
-        Enquire on WhatsApp
-      </a>
+      <a class="text-link" :href="linkFor(service.message)" target="_blank" rel="noopener">Enquire on WhatsApp</a>
     </div>
   </article>
 </template>
